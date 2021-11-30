@@ -1,19 +1,19 @@
 # Super User Credential Authentication - SUCA
 
-Notes on a new to innovate the way privilege escalation is done in
-UNIX terminals, aka let's sweat it and beat sudo at it.
+This project is just a wish for now and it collects notes on how to code a better software to do privilege escalation in
+any POSIX system.
 
-Starting point: https://sud.dyne.org
+The starting point: https://sud.dyne.org
 
-Licensing: Apache/MIT or BSD sort
+The licensing: Apache/MIT or BSD sort
 
-## Components
+## Selected components
 
 Needs a small local database like [KISSDB](https://github.com/adamierymenko/kissdb) (or the kissdb-SGX fork?)
 
 Needs secure string handline like [better string lib](https://github.com/msteinert/bstring) (fork of P. Hsieh)
 
-Needs PAM or even better [https://github.com/skarnet/pamela](Pamela), if it works
+Needs to use [https://github.com/skarnet/pamela](Pamela) for PAM functions, from Skarnet
 
 Binary command executable analysis: symlink, permissions, hash, malware signature?
 - https://github.com/gpakosz/whereami
@@ -26,12 +26,11 @@ Simple file based configuration (stb)
 
 Password entry via pinentry - assuan protocol when available (gpg/libassuan)
 
-Some more crypto (sign, hash) https://monocypher.org most likely not needed?
+## Docs
 
 Good PAM implementation reference: https://github.com/Duncaen/OpenDoas/raw/master/pam.c
 
-### XATTR signature:
-
+XATTR signature:
 ```
 HASH(64b):last-used(EPOCH):signature?
 ```
@@ -40,5 +39,5 @@ HASH(64b):last-used(EPOCH):signature?
 
 # Interested?
 
-Gonna do it sometimes, but not alone. Mail J@dyne.org
+Gonna do it sometimes, but not alone. If interested mail me at J@dyne.org
 
